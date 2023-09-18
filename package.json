@@ -1,6 +1,6 @@
 {
   "name": "rehype-meta-string",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A rehype plugin for parsing the meta string of markdown code fence",
   "keywords": [
     "mdx",
@@ -14,8 +14,8 @@
   ],
   "author": "Zheeeng<hi@zheeeng.me>",
   "license": "MIT",
-  "main": "index.js",
-  "typing": "index.d.ts",
+  "exports": "./index.js",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "https://github.com/zheeeng/rehype-meta-string"
