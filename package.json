@@ -1,0 +1,55 @@
+{
+  "name": "rehype-meta-string",
+  "version": "0.0.1",
+  "description": "A rehype plugin for parsing the meta string of markdown code fence",
+  "keywords": [
+    "mdx",
+    "markdown",
+    "meta",
+    "metastring",
+    "code fence",
+    "code meta",
+    "rehype",
+    "rehype-plugin"
+  ],
+  "author": "Zheeeng<hi@zheeeng.me>",
+  "license": "MIT",
+  "main": "index.js",
+  "typing": "index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zheeeng/rehype-meta-string"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "build": "tsc -b ./tsconfig.json",
+    "lint": "eslint src/**/*.ts",
+    "lint:fix": "eslint src/**/*.ts --fix",
+    "prepublishOnly": "pnpm build",
+    "release": "standard-version",
+    "release:major": "standard-version --release-as major",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch"
+  },
+  "dependencies": {
+    "@types/hast": "^3.0.1",
+    "unist-util-visit": "^5.0.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@types/node": "^20.6.2",
+    "@typescript-eslint/eslint-plugin": "^6.7.0",
+    "@typescript-eslint/parser": "^6.7.0",
+    "eslint": "^8.49.0",
+    "hast": "^1.0.0",
+    "husky": "^8.0.3",
+    "pnpm": "^8.7.6",
+    "standard-version": "^9.5.0",
+    "typescript": "^5.2.2"
+  }
+}
