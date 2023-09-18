@@ -173,15 +173,6 @@ const parser = (input: string): Record<string, string | boolean | [start: number
   return result
 }
 
-const parseMeta = (input: string) => {
-  const parsed = parser(input)
-
-  return {
-    ...parsed,
-    metaString: input,
-  }
-}
-
 export type RehypeMetaType<T extends Record<string, string | boolean | [start: number, end: number]>, S = 'metaString'> = T & Record<S & string, string>
 
 export type RehypeMetaStringOptions = {
