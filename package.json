@@ -27,8 +27,8 @@
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "build": "tsc -b ./tsconfig.json",
-    "lint": "eslint src/**/*.ts",
-    "lint:fix": "eslint src/**/*.ts --fix",
+    "lint": "eslint index.ts",
+    "lint:fix": "eslint index.ts --fix",
     "prepublishOnly": "pnpm build",
     "release": "standard-version",
     "release:major": "standard-version --release-as major",

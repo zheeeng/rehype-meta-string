@@ -183,7 +183,7 @@ export type RehypeMetaStringOptions = {
   metaString?: string,
 }
 
-export const rehypeMetaString = (options: RehypeMetaStringOptions) => {
+export const rehypeMetaString = ({ metaString = 'metaString' }: RehypeMetaStringOptions = {}) => {
   return (tree: Root) => {
     visit(tree, 'element', (node) => {
       if (node.tagName === 'code' && node.data && 'meta' in node.data && node.data.meta && typeof node.data.meta === 'string') {
@@ -193,8 +193,8 @@ export const rehypeMetaString = (options: RehypeMetaStringOptions) => {
 
         Object.assign(node.properties, parsed)
 
-        if (options.metaString) {
-          node.properties[options.metaString] = meta
+        if (metaString) {
+          node.properties[metaString] = meta
         }
       }
     })
