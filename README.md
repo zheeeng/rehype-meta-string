@@ -47,12 +47,12 @@ There is the illustration table:
 | meta string     | parsed |
 | --------------- | ------------------- |
 | foo             | { foo: true }       |
-| foo=true        | { foo: false }      |
-|
+| foo=true        | { foo: true }      |
+|  |  |
 | foo=false       | { foo: false }      |
-|
+|  |  |
 | foo=bar         | { foo: "bar" }      |
-|
+|  |  |
 | foo="false"     | { foo: "false" }    |
 | foo='false'     | { foo: "false" }    |
 | foo=\`false\`   | { foo: "false" }    |
@@ -62,9 +62,9 @@ There is the illustration table:
 | foo="bar baz"   | { foo: "bar baz" }  |
 | foo='bar baz'   | { foo: "bar baz" }  |
 | foo=\`bar baz\` | { foo: "bar baz" }  |
-|
+|  |  |
 | foo=[42-71]     | { foo: [42, 71] }   |
-|
+|  |  |
 | foo foo1=true foo2=false foo3=bar foo4="true" foo5='false' foo6=\`hello world\` foo7=[42-71] | { foo: true, foo1: true, foo2: false, foo3: "bar", foo4: "true", foo5: "false", foo6="hello world", foo7: [42, 71] }
 
 ## 🧩  Installation
